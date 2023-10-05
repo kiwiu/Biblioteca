@@ -1,8 +1,10 @@
-package com.example.biblioteca;
+package com.example.biblioteca.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.biblioteca.R;
 
 public class MainActivity2 extends AppCompatActivity {
 
