@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Biblioteca</string>
+    <string name="Title">Rent Book</string>
+    <string name="register">Register</string>
+    <string name="forget">Forget your password?</string>
+    <string name="create">Create Account</string>
+    <string name="Login">Login</string>
 </resources>
