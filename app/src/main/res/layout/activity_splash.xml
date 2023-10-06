@@ -12,20 +12,20 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="50dp"
             android:text="Rent Book"
-            android:textSize="60sp"
+            android:textSize="20sp"
             android:textColor="@color/md_theme_light_onBackground"
             android:gravity="center"
         />
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/ic_launcher_background"
+            android:layout_height="100dp"
+            android:src="@drawable/imagen"
         />
         <ProgressBar
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:indeterminateTint="@color/md_theme_light_onBackground"
             android:layout_marginTop="20dp"
         />

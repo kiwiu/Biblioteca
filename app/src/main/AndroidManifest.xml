@@ -33,10 +33,10 @@
             android:name=".Views.ListViewActivity"
             android:exported="false" />
         <activity
-            android:name=".Views.SplashActivity"
+            android:name=".Views.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".Views.RegisterActivity"
+            android:name=".Views.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

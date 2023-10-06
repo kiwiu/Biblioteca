@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Views.BookActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
-
 
 
 
@@ -72,10 +70,11 @@
             android:id="@+id/editTextTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/textViewTitulo"
             android:layout_below="@+id/btnSeleccionarImagen"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"/>
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/textViewTitulo"
+            android:hint="Titulo" />
 
         <TextView
             android:id="@+id/textViewAutor"
