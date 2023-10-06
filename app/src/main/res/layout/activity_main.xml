@@ -3,24 +3,246 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Base.Theme.Biblioteca"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backg"
     tools:context=".Views.MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="400dp"
-        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:id="@+id/title_bar_layout">
+
+        <ImageView
+            android:id="@+id/user_profile"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/imagen"/>
 
         <TextView
+            android:id="@+id/page_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginEnd="150dp"
+            android:layout_centerHorizontal="true"
+            android:text="Rent a Book"
+            android:textColor="@color/md_theme_light_onPrimary"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/menu_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/imagen" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/md_theme_light_background"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/fondo"
+        android:layout_below="@+id/title_bar_layout"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayout1"
+            android:layout_marginTop="40dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:id="@+id/row1"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/studentsCard"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/md_theme_light_secondaryContainer"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/studentsName"
+                            android:text="Usuarios"
+                            android:textSize="20sp"
+                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/studentsImage"/>
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:id="@+id/studentsImage"
+                            android:src="@drawable/imagen"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_secondaryContainer"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/bookName"
+                            android:text="Libros"
+                            android:textSize="20sp"
+                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:layout_marginTop="10dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/bookImage"/>
+                        <ImageView
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:id="@+id/bookImage"
+                            android:src="@drawable/imagen"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"/>
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/constraintLayout1">
+
+            <LinearLayout
+                android:id="@+id/row2"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/categoria"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_secondaryContainer">
+
+                        <TextView
+                            android:id="@+id/categoriaName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/categoriaImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="Categoria"
+                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/categoriaImage"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/imagen" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:background="@color/md_theme_light_secondaryContainer">
+
+                        <TextView
+                            android:id="@+id/PrestamosName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/PrestamosImage"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:text="Prestamos"
+                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/PrestamosImage"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/imagen" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+
+
 
 </RelativeLayout>
