@@ -5,6 +5,7 @@
     </style>
 
     <style name="AppTheme" parent="Base.Theme.Biblioteca">
+        <item name="Background">@color/md_theme_dark_background</item>
         <item name="colorPrimary">@color/md_theme_dark_primary</item>
         <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
         <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
