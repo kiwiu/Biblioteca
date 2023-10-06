@@ -37,6 +37,7 @@ public class BookActivity extends AppCompatActivity {
         editTextAutor = findViewById(R.id.editTextAutor);
         editTextTGenero = findViewById(R.id.editTextGenero);
         editTextAnio = findViewById(R.id.editTextAnioPublicacion);
+        imagenLibro = findViewById(R.id.imagenLibro);
 
         Button buttonGuardar = findViewById(R.id.buttonGuardar);
         buttonGuardar.setOnClickListener(new View.OnClickListener() {
