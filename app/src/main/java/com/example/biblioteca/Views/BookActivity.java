@@ -45,9 +45,11 @@ public class BookActivity extends AppCompatActivity {
                 // Aquí puedes obtener los valores de los campos y guardarlos en tu base de datos
                 String titulo = editTextTitulo.getText().toString();
                 String autor = editTextAutor.getText().toString();
+                String genero = editTextTGenero.getText().toString();
+                String fecha = editTextAnio.getFontFeatureSettings();
 
                 // Verifica si los campos están vacíos
-                if (titulo.isEmpty() || autor.isEmpty()) {
+                if (titulo.isEmpty() || autor.isEmpty() || genero.isEmpty() || fecha.isEmpty()) {
                     Toast.makeText(BookActivity.this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
                 } else {
 

@@ -6,4 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".Views.LoanActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:textAlignment="center"
+            android:paddingBottom="15dp"
+            android:textColor="@color/white"
+            android:id="@+id/encabezado"
+            android:textSize="25sp"
+            android:layout_marginTop="0dp"
+            android:fontFamily="serif"
+            android:layout_gravity="center"
+            android:background="@color/md_theme_light_primary"
+            android:text="Prestamo De Libro "
+            />
+
+        <ImageView
+            android:id="@+id/imagenLibro"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/encabezado"
+            android:src="@drawable/baseline_bookmark_added_24"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp"/>
+
+
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Libro prestado:"
+            android:textSize="24dp"
+            android:layout_below="@+id/imagenLibro"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewNombre"
+            android:layout_below="@+id/imagenLibro"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewFechaPrestamo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de prestamo:"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/editTextNombre"
+            android:layout_marginStart="16dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextFechaPrestamo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextNombre"
+            android:layout_toEndOf="@id/textViewFechaPrestamo"
+            android:layout_marginStart="16dp"
+            android:inputType="date"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewFechaDevolucion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de devolucion:"
+            android:layout_below="@id/editTextFechaPrestamo"
+            android:layout_marginStart="16dp"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/editTextFechaDevolucion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextFechaPrestamo"
+            android:layout_toEndOf="@id/textViewFechaDevolucion"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:inputType="date"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usuario:"
+            android:layout_below="@id/editTextFechaDevolucion"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/editTextUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/textViewUsuario"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/editTextFechaDevolucion"
+            android:layout_marginEnd="16dp"
+
+            />
+
+
+
+        <Button
+            android:id="@+id/buttonGuardar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textColor="@color/white"
+            android:layout_below="@id/editTextUsuario"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="serif"
+            android:backgroundTint="@color/md_theme_light_secondary"
+            android:layout_marginTop="24dp"/>
+
+    </RelativeLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
