@@ -5,7 +5,6 @@
     android:theme="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="baground"
     tools:context=".Views.RegisterActivity">
 
     <LinearLayout
@@ -25,7 +24,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/alatsi"
         android:text="@string/Title"
-        android:textColor="@color/md_theme_dark_primary"
+        android:textColor="@color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +46,8 @@
         <ImageView
             android:layout_width="70dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center">
-
+            android:layout_gravity="center"
+            android:src="@drawable/icono">
         </ImageView>
 
     </androidx.cardview.widget.CardView>
@@ -61,7 +60,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
         android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="?attr/colorTertiaryContainer"
         app:cardCornerRadius="20dp"
         app:cardElevation="21dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -148,6 +147,7 @@
         android:layout_height="70dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="40dp"
+        android:backgroundTint="?attr/colorTertiary"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -164,7 +164,7 @@
                 android:layout_width="165dp"
                 android:layout_height="65dp"
                 android:text="@string/create"
-                android:textColor="@color/white" />
+                android:backgroundTint="?attr/colorTertiary" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
