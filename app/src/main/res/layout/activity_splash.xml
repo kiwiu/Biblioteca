@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/md_theme_light_background"
         android:orientation="vertical"
         android:gravity="center"
         tools:context=".SplashActivity">
@@ -15,7 +15,7 @@
             android:layout_height="100dp"
             android:text="Rent Book"
             android:textSize="60sp"
-            android:textColor="@color/white"
+            android:textColor="@color/md_theme_light_onBackground"
             android:gravity="center"
         />
         <ImageView
@@ -26,7 +26,7 @@
         <ProgressBar
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:indeterminateTint="@color/white"
+            android:indeterminateTint="@color/md_theme_light_onBackground"
             android:layout_marginTop="20dp"
         />
     </LinearLayout>
