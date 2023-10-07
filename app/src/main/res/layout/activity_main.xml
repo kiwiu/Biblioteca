@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:theme="@style/Base.Theme.Biblioteca"
+    android:theme="@style/AppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backg"
@@ -31,7 +31,7 @@
             android:layout_marginEnd="150dp"
             android:layout_centerHorizontal="true"
             android:text="Rent a Book"
-            android:textColor="@color/md_theme_light_onPrimary"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="32sp"
             android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:backgroundTint="@color/md_theme_light_background"
+        android:backgroundTint="?android:attr/colorBackground"
         android:layout_marginTop="200dp"
         android:background="@drawable/fondo"
         android:layout_below="@+id/title_bar_layout"
@@ -88,7 +88,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="@color/md_theme_light_secondaryContainer"
+                        android:id="@+id/contentUser"
+                        android:background="?attr/colorSecondaryContainer"
                         >
 
                         <TextView
@@ -97,7 +98,7 @@
                             android:id="@+id/studentsName"
                             android:text="Usuarios"
                             android:textSize="20sp"
-                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textColor="?attr/colorOnSecondaryContainer"
                             android:layout_marginTop="10dp"
                             android:layout_centerHorizontal="true"
                             android:layout_below="@+id/studentsImage"/>
@@ -122,8 +123,9 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:gravity="center"
+                        android:id="@+id/contentBook"
                         android:layout_height="match_parent"
-                        android:background="@color/md_theme_light_secondaryContainer"
+                        android:background="?attr/colorSecondaryContainer">
                         >
                         <TextView
                             android:layout_width="wrap_content"
@@ -131,7 +133,7 @@
                             android:id="@+id/bookName"
                             android:text="Libros"
                             android:textSize="20sp"
-                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textColor="?attr/colorOnSecondaryContainer"
                             android:layout_marginTop="10dp"
                             android:layout_centerHorizontal="true"
                             android:layout_below="@+id/bookImage"/>
@@ -178,8 +180,9 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:gravity="center"
+                        android:id="@+id/contentCategory"
                         android:layout_height="match_parent"
-                        android:background="@color/md_theme_light_secondaryContainer">
+                        android:background="?attr/colorSecondaryContainer">
 
                         <TextView
                             android:id="@+id/categoriaName"
@@ -189,7 +192,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:text="Categoria"
-                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textColor="?attr/colorOnSecondaryContainer"
                             android:textSize="20sp" />
 
                         <ImageView
@@ -215,7 +218,8 @@
                         android:layout_width="match_parent"
                         android:gravity="center"
                         android:layout_height="match_parent"
-                        android:background="@color/md_theme_light_secondaryContainer">
+                        android:id="@+id/contentLoan"
+                        android:background="?attr/colorSecondaryContainer">
 
                         <TextView
                             android:id="@+id/PrestamosName"
@@ -225,7 +229,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
                             android:text="Prestamos"
-                            android:textColor="@color/md_theme_light_onSecondaryContainer"
+                            android:textColor="?attr/colorOnSecondaryContainer"
                             android:textSize="20sp" />
 
                         <ImageView

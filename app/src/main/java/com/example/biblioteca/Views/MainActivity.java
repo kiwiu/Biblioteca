@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        contentUser = findViewById(R.id.contentUsuer);
+        contentUser = findViewById(R.id.contentUser);
         contentBook = findViewById(R.id.contentBook);
-        contentPrestamo = findViewById(R.id.contentPrestamo);
+        contentPrestamo = findViewById(R.id.contentLoan);
         contentCategory = findViewById(R.id.contentCategory);
 
         contentUser.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, UserActivity.class)));
