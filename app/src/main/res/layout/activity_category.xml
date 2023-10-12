@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
     tools:context=".Views.CategoryActivity">
 
     <RelativeLayout
@@ -11,21 +12,33 @@
         android:layout_height="match_parent">
 
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"
-            android:textAlignment="center"
-            android:paddingBottom="15dp"
-            android:textColor="@color/white"
-            android:id="@+id/encabezado"
-            android:textSize="25sp"
-            android:layout_marginTop="0dp"
-            android:fontFamily="serif"
-            android:layout_gravity="center"
-            android:background="@color/md_theme_light_primary"
-            android:text="Categoria De Libros"
-            />
+            android:layout_height="70dp"
+            android:background="?attr/colorTertiary"
+            android:orientation="vertical"
+            android:id="@+id/encabezado">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/alatsi"
+                android:paddingTop="16dp"
+                android:paddingBottom="15dp"
+                android:text="Ingresar Generos"
+                android:textAlignment="center"
+                android:textColor="?attr/colorOnTertiary"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/wave"
+            android:layout_below="@+id/encabezado">
+        </View>
 
         <ImageView
             android:id="@+id/imagenLibro"
@@ -33,67 +46,44 @@
             android:layout_height="150dp"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/encabezado"
-            android:src="@drawable/baseline_assignment_24"
+            android:src="@drawable/category"
             android:layout_gravity="center"
             android:scaleType="centerCrop"
-            android:layout_marginTop="16dp"/>
-
-
-
-
-        <TextView
-            android:id="@+id/textViewNombre"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre de categoria:"
-            android:textSize="24dp"
-            android:layout_below="@+id/imagenLibro"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="16dp"/>
+            android:layout_marginTop="32dp"/>
 
         <EditText
-            android:id="@+id/editTextNombre"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/textViewNombre"
+            android:id="@+id/editTextNombreGenero"
             android:layout_below="@+id/imagenLibro"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"/>
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:inputType="date"
+            android:hint="Nombre Genero"/>
 
-        <TextView
-            android:id="@+id/textViewDescripcion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Descripcion:"
-            android:textSize="24dp"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/editTextNombre"
-            android:layout_marginStart="16dp"
-            />
 
         <EditText
             android:id="@+id/editTextDescripcion"
+            android:layout_below="@id/editTextNombreGenero"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/editTextNombre"
-            android:layout_toEndOf="@id/textViewDescripcion"
-            android:layout_marginStart="16dp"
+            android:layout_height="60dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"/>
-
-
-
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:inputType="date"
+            android:hint="Descripcion"/>
 
         <Button
             android:id="@+id/buttonGuardar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:text="Guardar"
-            android:textColor="@color/white"
+            android:textColor="?attr/colorOnTertiary"
             android:layout_below="@id/editTextDescripcion"
             android:layout_centerHorizontal="true"
             android:fontFamily="serif"
-            android:backgroundTint="@color/md_theme_light_secondary"
+            android:backgroundTint="?attr/colorTertiary"
             android:layout_marginTop="24dp"/>
 
     </RelativeLayout>

@@ -194,7 +194,7 @@
                             android:layout_below="@+id/categoriaImage"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="Categoria"
+                            android:text="Genero"
                             android:textColor="?attr/colorOnSecondaryContainer"
                             android:textSize="20sp" />
 
