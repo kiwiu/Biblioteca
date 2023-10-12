@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         contentPrestamo = findViewById(R.id.contentLoan);
         contentCategory = findViewById(R.id.contentCategory);
 
-        contentUser.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewActivity.class)));
-        contentBook.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewActivity.class)));
-        contentPrestamo.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewActivity.class)));
-        contentCategory.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewActivity.class)));
+        contentUser.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewGeneroActivity.class)));
+        contentBook.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewGeneroActivity.class)));
+        contentPrestamo.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewGeneroActivity.class)));
+        contentCategory.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, ListViewGeneroActivity.class)));
     }
 
 

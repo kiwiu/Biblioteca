@@ -30,7 +30,7 @@
             android:name=".Views.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".Views.ListViewActivity"
+            android:name=".Views.ListViewGeneroActivity"
             android:exported="false" />
         <activity
             android:name=".Views.RegisterActivity"

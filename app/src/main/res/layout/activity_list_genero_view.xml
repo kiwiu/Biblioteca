@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".Views.ListViewActivity">
+    tools:context=".Views.ListViewGeneroActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
     </RelativeLayout>
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchViewhome"
+        android:id="@+id/searchViewGenero"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/title_bar_layout"
@@ -39,12 +39,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchViewhome"
+        android:layout_below="@id/searchViewGenero"
         android:padding="16dp"
-        android:id="@+id/recycler_view" />
+        android:id="@+id/recycler_view_genero" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_note_btn"
+        android:id="@+id/add_genero_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
