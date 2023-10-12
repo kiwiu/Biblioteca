@@ -10,12 +10,19 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/bordes"
+        android:layout_height="60dp"
+        android:background="?attr/colorTertiary"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/textView2"
@@ -24,7 +31,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/alatsi"
         android:text="@string/Title"
-        android:textColor="@color/md_theme_light_primary"
+        android:textColor="?attr/colorOnTertiary"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,8 +54,7 @@
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:src="@drawable/baseline_person_24">
-
+            android:src="@drawable/login">
         </ImageView>
 
     </androidx.cardview.widget.CardView>
@@ -56,12 +62,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="460dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
-        android:background="@color/white"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="?attr/colorTertiaryContainer"
         app:cardCornerRadius="20dp"
         app:cardElevation="21dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +92,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/alatsi"
                     android:text="@string/Login"
+                    android:textColor="?attr/colorOnTertiaryContainer"
                     android:textSize="30dp" />
 
             </LinearLayout>
@@ -107,7 +113,8 @@
                 android:id="@+id/txtPasswordLogin"
                 android:layout_width="match_parent"
                 android:layout_height="70dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="16sp"
@@ -129,14 +136,14 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/alatsi"
                     android:text="@string/forget"
-                    android:textColor="@color/md_theme_light_primary" />
+                    android:textColor="?attr/colorOnTertiaryContainer" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView4"
                     android:layout_width="170dp"
                     android:layout_height="70dp"
                     android:layout_marginTop="20dp"
-                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:backgroundTint="?attr/colorTertiary"
                     app:cardCornerRadius="20dp">
 
                     <LinearLayout
@@ -149,9 +156,9 @@
                             android:id="@+id/btnLogin"
                             android:layout_width="165dp"
                             android:layout_height="65dp"
-                            android:backgroundTint="@color/md_theme_light_primary"
                             android:text="@string/Login"
-                            android:textColor="@color/white" />
+                            android:textColor="?attr/colorOnTertiary"
+                            android:backgroundTint="?attr/colorTertiary" />
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
@@ -164,7 +171,7 @@
         android:id="@+id/cardView3"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:backgroundTint="@color/md_theme_light_tertiary"
+        android:backgroundTint="?attr/colorTertiary"
         app:cardCornerRadius="20dp"
         app:cardElevation="40dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView"
@@ -182,9 +189,9 @@
                 android:id="@+id/btnRegisterLogin"
                 android:layout_width="165dp"
                 android:layout_height="65dp"
-                android:backgroundTint="@color/md_theme_light_primary"
                 android:text="@string/register"
-                android:textColor="@color/white" />
+                android:textColor="?attr/colorOnTertiary"
+                android:backgroundTint="?attr/colorTertiary" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -229,6 +236,15 @@
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

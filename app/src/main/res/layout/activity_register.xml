@@ -10,12 +10,19 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="60dp"
+        android:background="?attr/colorTertiary"
         android:orientation="vertical"
-        android:background="@drawable/bordes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/textView2"
@@ -24,7 +31,7 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/alatsi"
         android:text="@string/Title"
-        android:textColor="@color/black"
+        android:textColor="?attr/colorOnTertiary"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +54,7 @@
             android:layout_width="70dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:src="@drawable/icono">
+            android:src="@drawable/registro">
         </ImageView>
 
     </androidx.cardview.widget.CardView>
@@ -55,7 +62,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="470dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
@@ -80,8 +87,9 @@
                 android:layout_marginStart="98dp"
                 android:layout_marginTop="50dp"
                 android:fontFamily="@font/alatsi"
+                android:textColor="?attr/colorOnTertiaryContainer"
                 android:text="@string/register"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <EditText
                 android:id="@+id/txtEmail"
@@ -126,6 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/alatsi"
+                    android:textColor="?attr/colorOnTertiaryContainer"
                     android:text="Already a user?" />
 
                 <TextView
@@ -134,6 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:fontFamily="@font/alatsi"
+                    android:textColor="?attr/colorOnTertiaryContainer"
                     android:text="Login"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -164,6 +174,7 @@
                 android:layout_width="165dp"
                 android:layout_height="65dp"
                 android:text="@string/create"
+                android:textColor="?attr/colorOnTertiary"
                 android:backgroundTint="?attr/colorTertiary" />
         </LinearLayout>
 
@@ -209,5 +220,14 @@
         app:layout_constraintHorizontal_bias="0.178"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
