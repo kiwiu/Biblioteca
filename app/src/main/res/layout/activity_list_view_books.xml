@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".Views.ListViewUserActivity">
+    tools:context=".Views.ListViewBooksActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,13 +18,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="Usuarios"
+            android:text="Libros"
             android:textSize="32sp"
             android:textStyle="bold"/>
     </RelativeLayout>
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchViewUser"
+        android:id="@+id/searchViewLibros"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/title_bar_layout"
@@ -39,12 +39,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchViewUser"
+        android:layout_below="@id/searchViewLibros"
         android:padding="16dp"
-        android:id="@+id/recycler_view_User" />
+        android:id="@+id/recycler_view_Libros" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_user_btn"
+        android:id="@+id/add_Libros_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
