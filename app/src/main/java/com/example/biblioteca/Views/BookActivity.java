@@ -11,16 +11,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
-
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import com.example.biblioteca.R;
+import com.example.biblioteca.Utilities.UtilidadesGenero;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class BookActivity extends AppCompatActivity {
 
     //Declaracion de variables
     private EditText editTextTitulo;
     private EditText editTextAutor;
-    private EditText editTextTGenero;
+    private Spinner spinnerGenero;
     private EditText editTextAnio;
 
     private ImageView imagenLibro;
@@ -35,26 +43,54 @@ public class BookActivity extends AppCompatActivity {
         //Conectar lo del diseño con el codigo
         editTextTitulo = findViewById(R.id.editTextTitulo);
         editTextAutor = findViewById(R.id.editTextAutor);
-        editTextTGenero = findViewById(R.id.editTextGenero);
+        spinnerGenero = findViewById(R.id.editTextGenero);
         editTextAnio = findViewById(R.id.editTextAnioPublicacion);
         imagenLibro = findViewById(R.id.imagenLibro);
 
         Button buttonGuardar = findViewById(R.id.buttonGuardar);
-        buttonGuardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Aquí puedes obtener los valores de los campos y guardarlos en tu base de datos
-                String titulo = editTextTitulo.getText().toString();
-                String autor = editTextAutor.getText().toString();
-                String genero = editTextTGenero.getText().toString();
-                String fecha = editTextAnio.getFontFeatureSettings();
 
-                // Verifica si los campos están vacíos
-                if (titulo.isEmpty() || autor.isEmpty() || genero.isEmpty() || fecha.isEmpty()) {
-                    Toast.makeText(BookActivity.this, "Por favor, completa todos los campos.", Toast.LENGTH_SHORT).show();
-                } else {
+        // Configurar el Spinner para mostrar los géneros
+        setupSpinner();
 
+        buttonGuardar.setOnClickListener(v -> saveNote());
+    }
+
+    private void saveNote() {
+    }
+
+    private void setupSpinner() {
+        // Obtener una referencia a la colección de "Generos"
+        CollectionReference generoCollection = UtilidadesGenero.getCollectionReferenceForGeneros();
+
+        // Recuperar los géneros de Firebase
+        generoCollection.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                List<String> generos = new ArrayList<>();
+                for (QueryDocumentSnapshot document : task.getResult()) {
+                    String nombreGenero = document.getString("nombre");
+                    generos.add(nombreGenero);
                 }
+
+                // Configurar el adaptador para el Spinner
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, generos);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerGenero.setAdapter(adapter);
+            } else {
+                // Manejar errores en la recuperación de datos de Firebase
+                Toast.makeText(BookActivity.this, "Error al obtener géneros", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Agregar un listener para el Spinner (si es necesario)
+        spinnerGenero.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // Aquí puedes realizar acciones cuando se selecciona un género
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Manejar la selección de nada
             }
         });
     }
