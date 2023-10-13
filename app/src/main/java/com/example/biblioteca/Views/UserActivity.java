@@ -74,6 +74,18 @@ public class UserActivity extends AppCompatActivity {
             return;
         }
 
+            // Validar el formato del número de teléfono "0000-0000"
+        if (!telefono.matches("\\d{4}-\\d{4}")) {
+            Toast.makeText(this, "Formato de teléfono inválido. Debe ser '0000-0000'", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+            // Validar la longitud del número de teléfono
+        if (telefono.length() != 9) {
+            Toast.makeText(this, "Formato de teléfono inválido. Debe ser '0000-0000'", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         Usuario usuario = new Usuario();
         usuario.setNombre(nombre);
         usuario.setNumeroTelefono(telefono);
