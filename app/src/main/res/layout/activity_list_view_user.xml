@@ -18,13 +18,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="Generos"
+            android:text="Usuarios"
             android:textSize="32sp"
             android:textStyle="bold"/>
     </RelativeLayout>
 
     <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchViewGenero"
+        android:id="@+id/searchViewUser"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:layout_below="@id/title_bar_layout"
@@ -39,12 +39,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/searchViewGenero"
+        android:layout_below="@id/searchViewUser"
         android:padding="16dp"
-        android:id="@+id/recycler_view_genero" />
+        android:id="@+id/recycler_view_User" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/add_genero_btn"
+        android:id="@+id/add_user_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

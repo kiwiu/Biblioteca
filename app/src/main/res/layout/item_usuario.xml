@@ -25,8 +25,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/note_title_text_view"
-                android:text="Titulo libro"
+                android:id="@+id/user_title_text_view"
+                android:text="Nombre Usuario"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
@@ -44,6 +44,7 @@
         </RelativeLayout>
 
         <ImageView
+            android:id="@+id/user_image_view"
             android:layout_width="150dp"
             android:layout_height="160dp"
             android:layout_gravity="center"
@@ -52,31 +53,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/note_content_text_view"
-            android:text="Descripcion"
+            android:id="@+id/telefono_content_text_view"
+            android:text="Telefono"
             android:maxLines="2"
             android:ellipsize="end"
             android:textSize="17sp"
             android:layout_marginVertical="4dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/note_category_text_view"
-            android:text="Categoria"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:textSize="17sp"
-            android:layout_marginVertical="4dp"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/note_timestamp_text_view"
-            android:text="Fecha prestamo"
-            android:textSize="12sp"
-            android:gravity="right"
-            android:layout_marginVertical="4dp"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
