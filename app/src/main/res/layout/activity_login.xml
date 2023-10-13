@@ -105,8 +105,6 @@
                 android:hint="E-mail"
                 android:inputType="textEmailAddress"
                 android:padding="16sp"
-                android:textColor="@color/md_theme_light_primary"
-                android:textColorHint="@color/md_theme_light_secondary"
                 android:textSize="20sp" />
 
             <EditText
@@ -118,8 +116,6 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="16sp"
-                android:textColor="@color/md_theme_light_primary"
-                android:textColorHint="@color/md_theme_light_secondary"
                 android:textSize="20sp" />
 
             <LinearLayout

@@ -196,30 +196,4 @@ public class BookActivity extends AppCompatActivity {
         });
     }
 
-    //Para poder seleccionar una imagen de la galeria
-    public void seleccionarImagen(View view) {
-        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, SELECT_IMAGE);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-
-        if (requestCode == SELECT_IMAGE && resultCode == RESULT_OK && data != null) {
-            Uri selectedImageUri = data.getData();
-
-            try {
-                // Obtener la imagen seleccionada como un Bitmap
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
-
-                // Mostrar el Bitmap en el ImageView
-                imagenLibro.setImageBitmap(bitmap);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
 }
