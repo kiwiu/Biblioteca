@@ -43,7 +43,7 @@ public class UserActivity extends AppCompatActivity {
         buttonGuardar = findViewById(R.id.buttonGuardar);
 
         nombre = getIntent().getStringExtra("nombre");
-        numBiblio = getIntent().getStringExtra("numBiblio");
+        numBiblio = getIntent().getStringExtra("biblioteca");
         direccion = getIntent().getStringExtra("direccion");
         telefono = getIntent().getStringExtra("telefono");
         usuarioId = getIntent().getStringExtra("usuarioId");
@@ -77,6 +77,8 @@ public class UserActivity extends AppCompatActivity {
         Usuario usuario = new Usuario();
         usuario.setNombre(nombre);
         usuario.setNumeroTelefono(telefono);
+        usuario.setNumeroBiblioteca(numBiblio);
+        usuario.setDireccion(direccion);
 
         savedUserToFirebase(usuario);
 }

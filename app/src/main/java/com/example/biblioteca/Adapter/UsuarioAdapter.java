@@ -38,6 +38,8 @@ public class UsuarioAdapter extends FirestoreRecyclerAdapter<Usuario, UsuarioAda
         holder.nombreTextView.setText(model.getNombre());
         holder.telefonoTextView.setText(model.getNumeroTelefono());
 
+
+
         holder.btnDelete.setOnClickListener(view -> {
             // Aquí puedes implementar la lógica para eliminar un género.
             try {
@@ -66,6 +68,8 @@ public class UsuarioAdapter extends FirestoreRecyclerAdapter<Usuario, UsuarioAda
             Intent intent = new Intent(context, UserActivity.class);
             intent.putExtra("nombre", model.getNombre()) ;
             intent.putExtra("telefono", model.getNumeroTelefono());
+            intent.putExtra("direccion", model.getDireccion());
+            intent.putExtra("biblioteca", model.getNumeroBiblioteca());
 
             String usuarioId = this.getSnapshots().getSnapshot(position).getId();
             intent.putExtra("usuarioId", usuarioId);
@@ -82,12 +86,15 @@ public class UsuarioAdapter extends FirestoreRecyclerAdapter<Usuario, UsuarioAda
     }
 
     class UsuarioViewHolder extends RecyclerView.ViewHolder{
-        TextView nombreTextView, telefonoTextView;
+        TextView nombreTextView, telefonoTextView, direccionTextView, bibliotecaTextView;
         ImageView btnDelete;
         public UsuarioViewHolder(@NonNull View itemView) {
             super(itemView);
             nombreTextView = itemView.findViewById(R.id.user_title_text_view);
             telefonoTextView = itemView.findViewById(R.id.telefono_content_text_view);
+            direccionTextView = itemView.findViewById(R.id.editTextDireccion);
+            bibliotecaTextView = itemView.findViewById(R.id.editTextNumeroBiblioteca);
+
             btnDelete = itemView.findViewById(R.id.delete_btn);
         }
     }
