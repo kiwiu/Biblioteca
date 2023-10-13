@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.biblioteca.Models.Usuario;
 import com.example.biblioteca.R;
-import com.example.biblioteca.Utilities.UtilidadesGenero;
 import com.example.biblioteca.Utilities.UtilityUsuario;
 import com.example.biblioteca.Views.UserActivity;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
