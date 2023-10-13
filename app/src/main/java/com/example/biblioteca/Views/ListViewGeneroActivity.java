@@ -61,7 +61,7 @@ public class ListViewGeneroActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String queryText) {
-                Toast.makeText(ListViewGeneroActivity.this, "Searching...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ListViewGeneroActivity.this, "Buscando...", Toast.LENGTH_SHORT).show();
                 txtSearch(queryText);
                 return false;
             }
@@ -75,7 +75,7 @@ public class ListViewGeneroActivity extends AppCompatActivity {
     }
 
     void txtSearch(String queryText){
-        Query query = UtilidadesGenero.getCollectionReferenceForGeneros().orderBy("title")
+        Query query = UtilidadesGenero.getCollectionReferenceForGeneros().orderBy("nombre")
                 .startAt(queryText).endAt(queryText+"\uf8ff");
         FirestoreRecyclerOptions<Genero> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Genero>()
                 .setQuery(query, Genero.class).build();
@@ -93,7 +93,7 @@ public class ListViewGeneroActivity extends AppCompatActivity {
                 }
 
                 if (value.isEmpty()) {
-                    Toast.makeText(ListViewGeneroActivity.this, "No results found", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ListViewGeneroActivity.this, "Sin conicidencias", Toast.LENGTH_SHORT).show();
                 }
             }
         });

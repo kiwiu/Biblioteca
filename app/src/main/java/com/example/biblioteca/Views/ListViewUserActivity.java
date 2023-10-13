@@ -78,7 +78,7 @@ public class ListViewUserActivity extends AppCompatActivity {
     }
 
     void txtSearch(String queryText){
-        Query query = UtilityUsuario.getCollectionReferenceForUsers().orderBy("title")
+        Query query = UtilityUsuario.getCollectionReferenceForUsers().orderBy("nombre")
                 .startAt(queryText).endAt(queryText+"\uf8ff");
         FirestoreRecyclerOptions<Usuario> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Usuario>()
                 .setQuery(query, Usuario.class).build();

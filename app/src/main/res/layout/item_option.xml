@@ -39,7 +39,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/Title"
                 android:scaleType="centerInside"
-                android:src="@drawable/eliminar" />
+                android:src="@drawable/delete" />
 
         </RelativeLayout>
 

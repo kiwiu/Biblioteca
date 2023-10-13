@@ -5,7 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/md_theme_light_background"
+        android:background="?android:attr/colorBackground"
         android:orientation="vertical"
         android:gravity="center"
         tools:context=".Views.SplashActivity">
@@ -21,12 +21,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/imagen"
+            android:src="@drawable/book"
         />
         <ProgressBar
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:indeterminateTint="@color/md_theme_light_onBackground"
+            android:indeterminateTint="?attr/colorPrimary"
             android:layout_marginTop="20dp"
         />
     </LinearLayout>

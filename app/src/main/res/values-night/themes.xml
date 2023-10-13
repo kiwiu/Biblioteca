@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Biblioteca" parent="Theme.Material3.DayNight.NoActionBar">
-
+        <item name="colorPrimary">@color/md_theme_light_tertiary</item>
     </style>
 
     <style name="AppTheme" parent="Base.Theme.Biblioteca">

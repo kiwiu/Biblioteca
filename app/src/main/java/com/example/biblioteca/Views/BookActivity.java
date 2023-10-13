@@ -28,6 +28,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -103,6 +104,27 @@ public class BookActivity extends AppCompatActivity {
 
         if (titulo.isEmpty() || autor.isEmpty() || genero.isEmpty() || fecha.isEmpty()) {
             Toast.makeText(this, "Por favor llena todos los campos", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Validar el formato de la fecha "DD/MM/YYYY"
+        if (!fecha.matches("\\d{2}/\\d{2}/\\d{4}")) {
+            Toast.makeText(this, "Formato de fecha inválido. Debe ser 'DD/MM/YYYY'", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String[] fechaParts = fecha.split("/");
+        int day = Integer.parseInt(fechaParts[0]);
+        int month = Integer.parseInt(fechaParts[1]);
+        int year = Integer.parseInt(fechaParts[2]);
+
+        // Obtener el año actual
+        Calendar cal = Calendar.getInstance();
+        int currentYear = cal.get(Calendar.YEAR);
+
+        // Realizar las validaciones
+        if (day < 1 || day > 31 || month < 1 || month > 12 || year < 1800 || year > currentYear) {
+            Toast.makeText(this, "Fecha inválida. Verifica el día, mes y año.", Toast.LENGTH_SHORT).show();
             return;
         }
 
